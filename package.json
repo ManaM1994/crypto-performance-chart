@@ -1,0 +1,30 @@
+{
+  "name": "crypto-performance-chart",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "next": "^14.0.0",
+    "echarts": "^5.4.3",
+    "echarts-for-react": "^3.0.2",
+    "zustand": "^4.4.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "@types/node": "^20.8.6",
+    "@types/react": "^18.2.28",
+    "@types/react-dom": "^18.2.13",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.3",
+    "eslint": "^8.51.0",
+    "eslint-config-next": "^14.0.0"
+  }
+}
