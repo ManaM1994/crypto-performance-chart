@@ -3,6 +3,7 @@ import { PerformanceMetric } from "@/lib/types";
 import { Suspense } from "react";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import ChartDataProvider from "@/components/ChartDataProvider";
+import { ClientButton } from "@/components/common";
 
 const TOP_CRYPTOS_COUNT = 50;
 const DEFAULT_METRIC: PerformanceMetric = "perf_24h";
@@ -18,12 +19,13 @@ export default async function Home() {
           <p className="text-red-500">
             {result.error || "An unknown error has occurred"}
           </p>
-          <button
+          <ClientButton
             onClick={() => window.location.reload()}
-            className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            variant="primary"
+            size="medium"
           >
             Try Again
-          </button>
+          </ClientButton>
         </div>
       );
     }
@@ -66,12 +68,13 @@ export default async function Home() {
         <p className="text-red-500">
           An error occurred while loading the data. Please try again.
         </p>
-        <button
+        <ClientButton
           onClick={() => window.location.reload()}
-          className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+          variant="primary"
+          size="medium"
         >
           Try Again
-        </button>
+        </ClientButton>
       </div>
     );
   }

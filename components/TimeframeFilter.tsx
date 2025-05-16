@@ -3,6 +3,7 @@
 import React, { useCallback } from "react";
 import { PerformanceMetric } from "@/lib/types";
 import { useChartStore } from "@/lib/store";
+import { ClientButton } from "@/components/common";
 
 interface TimeframeOption {
   value: PerformanceMetric;
@@ -49,23 +50,16 @@ const TimeframeFilter: React.FC = () => {
       <h3 className="text-lg font-semibold text-gray-800 mb-3">
         Performance Timeframe
       </h3>
-
       <div className="flex flex-wrap gap-2">
         {timeframeOptions.map((option) => (
-          <button
+          <ClientButton
             key={option.value}
             onClick={() => handleButtonClick(option.value)}
-            className={`
-              px-4 py-2 rounded-md transition-colors duration-200
-              ${
-                selectedMetric === option.value
-                  ? "bg-indigo-600 text-white"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
-              }
-            `}
+            variant={selectedMetric === option.value ? "primary" : "secondary"}
+            size="medium"
           >
             {option.label}
-          </button>
+          </ClientButton>
         ))}
       </div>
     </div>
